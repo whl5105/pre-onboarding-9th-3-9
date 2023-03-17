@@ -4,7 +4,7 @@
 
 <br/>
 
-## [🔗 배포 URL]((https://pre-onboarding-9th-3-9.vercel.app)
+## [🔗 배포 URL](https://pre-onboarding-9th-3-9.vercel.app)
 
 <br/>
 
@@ -163,12 +163,6 @@ npm start
 - **master(main)** : 배포하는 브랜치
 - **develop** : 개발 브랜치
 - **feature** : 단위 기능을 개발하는 브랜치
-- **hotfix** : master 브랜치로 배포를 했는데 버그가 생겼을 떄 긴급 수정하는 브랜치 입니다.
-
-예시)
-**feature/main-name**
-**feature/reservations**-**name**
-**hotfix/issue-issueName**
 
 <br/>
 
