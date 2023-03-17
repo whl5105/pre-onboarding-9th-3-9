@@ -4,7 +4,7 @@
 
 <br/>
 
-## [🔗 배포 URL]()
+## [🔗 배포 URL](pre-onboarding-9th-3-9.vercel.app)
 
 <br/>
 
@@ -16,58 +16,78 @@
 
 ```bash
 npm install
-or
-yarn install
 ```
 
 **Start**
 
 ```bash
 npm start
-or
-yarn start
 ```
 
 <br/>
 
 ## ✅ 요구사항
 
+<br/>
+
 #### Assignment 1
 
-> Assignment 1
--
--
--
+> 시계열 차트 만들기
+- 주어진 JSON 데이터의 key값(시간)을 기반으로 시계열 차트를 만들어주세요
+하나의 차트안에 Area 형태의 그래프와 Bar 형태의 그래프가 모두 존재하는 복합 그래프로 만들어주세요
+- Area 그래프의 기준값은 value_area 값을 이용해주세요
+- Bar 그래프의 기준값은 value_bar 값을 이용해주세요
+- 차트의 Y축에 대략적인 수치를 표현해주세요
+
+<br/>
 
 #### Assignment 2
 
-> Assignment 2
--
--
--
+> 호버 기능 구현
+- 특정 데이터 구역에 마우스 호버시 id, value_area, value_bar 데이터를 툴팁 형태로 제공해주세요
+
+<br/>
 
 #### Assignment 3
 
-> Assignment 3
--
--
--
+> 필터링 기능 구현
+- 특정 데이터를 하이라이트 하는 방식으로 구현해주세요
+- 필터링 기능은 버튼 형태로 ID값(지역이름)을 이용해주세요
+- 필터링 시 버튼에서 선택한 ID값과 동일한 ID값을 가진 데이터 구역만 하이라이트 처리를 해주세요
+- 특정 데이터 구역을 클릭 시에도 필터링 기능과 동일한 형태로 동일한 ID값을 가진 데이터 구역을 하이라이트해주세요
 
 <br />
 
 ## 📽️ 데모 영상
+![ezgif com-video-to-gif](https://user-images.githubusercontent.com/90454621/225868798-925262e9-2aa1-4f53-9fe8-eee2ce9d144c.gif)
 
+<br/>
 
+## 📚 구현 기능 설명
+- 첫 화면 진입 시 `전체` 데이터 하이라이트 상태를 적용합니다.
+- 특정 데이터 구역을 클릭하면, 해당 id 값을 가진 데이터 구역이 하이라이트 처리되고, 버튼이 활성화됩니다.
+- `react-router`와 `useSearchParams`로 필터링 기능을 구현하여 필터링 조건이 url의 query string으로 유지되도록 합니다.
 
-## 📚 기능 설명
+<br/>
 
-**공통**
-
+## 👍 Best Practice
+- 레퍼런스가 풍부한 `Chart.js` 라이브러리 사용
+- `useChartDataState`로 `관심사 분리`, 데이터 불러오고 가공하는 부분을 `유지보수`가  용이하도록 구현 
+- 쿼리스트링을 다루기 위한 여러 메서드를 제공하는 `useSearchParams`를 이용하여 필터링 기능 구현 
+- `theme provider`를 적용하여 색상 코드 재사용
+- y축 최댓값을 조절하여 혼합 형태의 그래프에서 데이터 `가시성`을 높임
+- 전체 버튼을 추가하여 `사용자 편의성` 향상
+- 존재하지 않는 경로로 접근 시 메인 페이지로 이동하도록 구현
 
 <br/>
 
 ## ⚙️ 기술 스택
-
+`TypeScript`
+`CRA`
+`axios`
+`react-router-dom`
+`mui`
+`Chart.js`
 
 
 <br/>
@@ -75,48 +95,44 @@ yarn start
 ## 🗂️ 폴더구조
 
 ```bash
-ㄴ 📁 apis
-   ㄴ 📄 instance.ts
-ㄴ 📁 commons
-   ㄴ 📄 utils.ts
-ㄴ 📁 components
-   ㄴ 📁 common
-      ㄴ 📄 CheckBoxes.tsx
-      ㄴ 📄 SkeletonImage.tsx
-      ㄴ 📄 Slider.tsx
-      ㄴ 📄 Toast.tsx
-   ㄴ 📁 layout
-      ㄴ 📄 Footer.tsx
-      ㄴ 📄 Header.tsx
-      ㄴ 📄 Layout.tsx
-   ㄴ 📁 main
-      ㄴ 📄 Product.tsx
-      ㄴ 📄 ProductsFilter.tsx
-      ㄴ 📄 ProductsList.tsx
-      ㄴ 📄 ProductsModal.tsx
-   ㄴ 📁 reservation
-      ㄴ 📄 Reservation.tsx
-      ㄴ 📄 ReservationsList.tsx
-ㄴ 📁 pages
-   ㄴ 📄 Main.tsx
-   ㄴ 📄 Reservations.tsx
-ㄴ 📁 shared
-   ㄴ 📄 Router.tsx
-ㄴ 📁 types
-   ㄴ 📄 types.d.ts
+ㄴ 📁 public
+   ㄴ 📁 mock
+      ㄴ 📄 mock_data.json
+ㄴ 📁 src
+   ㄴ 📁 apis
+      ㄴ 📄 instance.ts
+   ㄴ 📁 components
+      ㄴ 📁 ui
+         ㄴ 📄 Button.tsx
+      ㄴ 📄 Filter.tsx
+      ㄴ 📄 TimeChart.tsx
+   ㄴ 📁 hooks
+      ㄴ 📄 useChartDataState.ts
+   ㄴ 📁 page
+      ㄴ 📄 Home.tsx
+      ㄴ 📄 NotFound.tsx
+   ㄴ 📁 styles
+      ㄴ 📄 GlobalStyle.tsx
+      ㄴ 📄 index.css
+      ㄴ 📄 theme.ts
+   ㄴ 📁 types
+      ㄴ 📄 style.d.ts
+      ㄴ 📄 types.d.ts
+   ㄴ 📄 index.tsx
+
 ```
 
 <br/>
 
 ## 🕖 타임라인
 
-**_2023.03.07 ~ 2023.03.10 (4일)_**
+**_2023.03.13 ~ 2023.03.17 (5일)_**
 | 기간 | 진행 사항 |
 |------|------|
-|2023/03/07| 사용 기술 스택 및 라이브러리 선정,git convention 및 폴더 구조 작성 |
-|2023/03/08| 기능구현 |
-|2023/03/09| 코드 리뷰 및 best practice 선정 |
-|2023/03/10| 코드 리팩토링 |
+|2023/03/13| 사용 기술 스택 및 라이브러리 선정, git convention 및 폴더 구조 작성, 프로젝트 초기화 설정 |
+|2023/03/15| 기능구현 |
+|2023/03/16| 코드 리뷰 및 best practice 선정 |
+|2023/03/17| 리팩토링 및 배포 |
 
 <br/>
 
