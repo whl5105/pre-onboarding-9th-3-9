@@ -37,14 +37,10 @@ npm start
 - Bar 그래프의 기준값은 value_bar 값을 이용해주세요
 - 차트의 Y축에 대략적인 수치를 표현해주세요
 
-<br/>
-
 #### Assignment 2
 
 > 호버 기능 구현
 - 특정 데이터 구역에 마우스 호버시 id, value_area, value_bar 데이터를 툴팁 형태로 제공해주세요
-
-<br/>
 
 #### Assignment 3
 
