@@ -4,7 +4,7 @@
 
 <br/>
 
-## [🔗 배포 URL](pre-onboarding-9th-3-9.vercel.app)
+## [🔗 배포 URL]((https://pre-onboarding-9th-3-9.vercel.app)
 
 <br/>
 
