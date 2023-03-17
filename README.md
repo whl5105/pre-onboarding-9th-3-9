@@ -28,8 +28,6 @@ npm start
 
 ## ✅ 요구사항
 
-<br/>
-
 #### Assignment 1
 
 > 시계열 차트 만들기
@@ -66,7 +64,7 @@ npm start
 ## 📚 구현 기능 설명
 - 첫 화면 진입 시 `전체` 데이터 하이라이트 상태를 적용합니다.
 - 특정 데이터 구역을 클릭하면, 해당 id 값을 가진 데이터 구역이 하이라이트 처리되고, 버튼이 활성화됩니다.
-- `react-router`와 `useSearchParams`로 필터링 기능을 구현하여 필터링 조건이 url의 query string으로 유지되도록 합니다.
+- `react-router`의 `useSearchParams`로 필터링 기능을 구현하여 필터링 조건이 url의 query string으로 유지되도록 합니다.
 
 <br/>
 
@@ -86,9 +84,7 @@ npm start
 `CRA`
 `axios`
 `react-router-dom`
-`mui`
 `Chart.js`
-
 
 <br/>
 
